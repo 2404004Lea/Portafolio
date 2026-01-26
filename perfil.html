@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portafolio - Desarrolladores</title>
+  <link rel="stylesheet" href="css/p.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+    <header class="nav">
+      <div class="nav-left logo">
+        <span class="logo-icon"></span>
+        <span class="logo-text">PORTAFOLIO</span>
+      </div>
+
+      <nav class="nav-right" id="navMagic">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="introduccion.html" class="nav-link">Introducción</a>
+        <div class="nav-item" id="navMagic">
+            <a href="#unidades" class="nav-link">Unidades ▾</a>
+            <ul class="submenu">
+                <li><a href="unidad1.html">INTRODUCCIÓN AL DESARROLLO WEB ORIENTADO A SERVICIOS</a></li>
+                <li><a href="unidad2.html">IMPLEMENTACIÓN DE API</a></li>
+                <li><a href="unidad3.html">DESARROLLO API</a></li>
+                <li><a href="unidad4.html">IMPLEMENTACIÓN</a></li>
+                <span class="nav-underline" aria-hidden="true"></span>
+            </ul>
+        </div>
+            <span class="nav-underline" aria-hidden="true"></span>
+      </nav>
+    </header>
+    <hr>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <p class="hero-label">PERFILES</p>
+      <h1 class="hero-title">
+        DESARROLLADORES<br>DEL PORTAFOLIO
+      </h1>
+      <p class="hero-desc">
+        En esta sección se presentan los desarrolladores que participaron en la creación del portafolio, destacando sus roles y tecnologías utilizadas.
+      </p>
+      <div class="hero-buttons">
+      </div>
+    </section>
+
+    <!-- CHARACTER SECTION -->
+    <section class="characters-section">
+      <h2 class="section-title">DESARROLLADORES</h2>
+
+      <div class="characters-grid">
+        <div class="character-card active" onclick="selectCharacter(0)">
+          <div class="character-image">
+            <img src="images/desarrollador_nay.jpeg" alt="Naylea Hiromi">
+          </div>
+          <p class="character-name">Aguilar Lopez<br>Naylea Hiromi</p>
+        </div>
+
+        <div class="character-card" onclick="selectCharacter(1)">
+          <div class="character-image">
+            <img src="images/desarrollador_vicky.jpeg" alt="Victoria Carolina">
+          </div>
+          <p class="character-name">Rodriguez Galindo<br>Victoria Carolina</p>
+        </div>
+      </div>
+
+      <!-- CHARACTER DETAIL -->
+      <div class="character-detail">
+        <div class="detail-grid">
+          <div class="detail-left">
+            <h3>Informacion<br>del desarrollador</h3>
+            <p id="character-description">
+              Diseño de interfaces, realización de introducción y unidades. Tecnologías: HTML, CSS, PHP.
+            </p>
+            <span class="read-more">Leer más →</span>
+          </div>
+
+          <div class="detail-center">
+            <div class="character-display">
+              <img id="character-image" src="images/desarrollador_nay.jpeg" alt="Desarrollador">
+              <p class="character-display-name" id="character-display-name">NAYLEA HIROMI</p>
+            </div>
+          </div>
+
+          <div class="detail-right">
+            <h4 id="detail-name">Aguilar Lopez Naylea Hiromi</h4>
+            <p class="role" id="detail-role">Desarrolladora Front-End</p>
+
+            <div class="info-block">
+              <div class="info-title">
+                <span class="info-dot"></span>
+                <h5 id="ability-name">Especialidad</h5>
+              </div>
+              <p class="info-desc" id="ability-desc">Diseño de interfaces y desarrollo web</p>
+            </div>
+
+            <div class="info-block">
+              <div class="info-title">
+                <span class="info-dot"></span>
+                <h5>Calificación</h5>
+              </div>
+              <div class="rating" id="rating">
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+              </div>
+            </div>
+
+            <div class="logo-badge">HA</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOTTOM BANNER -->
+    <div class="bottom-banner">
+      <div class="bottom-banner-item"><p>DESARROLLADORA 1</p></div>
+      <div class="bottom-banner-item"><p>DESARROLLADORA 2</p></div>
+    </div>
+
+    <hr>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-col">
+          <h4>Portafolio</h4>
+          <p>
+            Portafolio de evidencias académicas de la materia
+            <strong>Desarrollo Web</strong>.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Datos académicos</h4>
+          <ul>
+            <li>Universidad Tecnológica</li>
+            <li>Carrera: Desarrollo de Software</li>
+            <li>Materia: Desarrollo Web</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-line"></div>
+
+      <div class="footer-bottom">
+        <span>© 2026 — Portafolio de evidencias</span>
+        <span>Desarrollado por Victoria Carolina y Naylea Aguilar</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- JAVASCRIPT -->
+  <script>
+     const characters = [
+  {
+    name: 'Aguilar Lopez Naylea Hiromi',
+    displayName: 'NAYLEA HIROMI',
+    image: 'images/desarrollador_nay.jpeg',
+    role: 'Desarrolladora Front-End',
+    description: 'Diseño de interfaces, realización de introducción y unidades. Tecnologías: HTML, CSS, PHP.',
+    ability: 'Especialidad',
+    abilityDesc: 'Diseño de interfaces y desarrollo web',
+    rating: 5,
+    fullInfo: `
+      <p><strong>Estudiante de Desarrollo de Software</strong> en quinto cuatrimestre, con interés en el desarrollo web y la creación de aplicaciones funcionales y accesibles.</p>
+
+      <p>Apasionada por aprender nuevas tecnologías y mejorar continuamente sus habilidades en programación.</p>
+
+      <h4>Lenguajes</h4>
+      <p>HTML, CSS, Python, PHP</p>
+
+      <h4>Herramientas</h4>
+      <p>Visual Studio Code, XAMPP, Git, GitHub, Figma</p>
+
+      <h4>Otras habilidades</h4>
+      <p>Trabajo en equipo, resolución de problemas, adaptabilidad a nuevos entornos, diseño básico en Figma, bases de datos MySQL y desarrollo de aplicaciones web.</p>
+
+      <h4>Formación académica</h4>
+      <p>
+        Técnico Superior Universitario en Desarrollo de Software Multiplataforma (5° cuatrimestre)<br>
+        Técnico en Programación – CETIS 60
+      </p>
+
+      <h4>Proyectos</h4>
+      <p>
+        Desarrollo de un portafolio web personal utilizando HTML, CSS y PHP para mostrar habilidades y proyectos.
+      </p>
+    `
+  },
+        {
+    name: 'Rodriguez Galindo Victoria Carolina',
+    displayName: 'VICTORIA CAROLINA',
+    image: 'images/desarrollador_vicky.jpeg',
+    role: 'Desarrolladora Full-Stack',
+    description: 'Diseño de interfaces, realización del index y unidades. Tecnologías: PHP y MySQL.',
+    ability: 'Especialidad',
+    abilityDesc: 'Desarrollo backend y bases de datos',
+    rating: 5,
+    fullInfo: `
+      <p><strong>Estudiante de Desarrollo de Software</strong> con enfoque en el desarrollo backend y la gestión de bases de datos.</p>
+
+      <p>Interesada en la creación de aplicaciones web eficientes, seguras y bien estructuradas.</p>
+
+      <h4>Lenguajes</h4>
+      <p>PHP, SQL, HTML, CSS</p>
+
+      <h4>Herramientas</h4>
+      <p>XAMPP, Visual Studio Code, MySQL, Git, GitHub</p>
+
+      <h4>Habilidades</h4>
+      <p>Desarrollo backend, diseño de bases de datos, trabajo colaborativo y análisis lógico.</p>
+
+      <h4>Formación académica</h4>
+      <p>
+        Técnico Superior Universitario en Desarrollo de Software<br>
+        Área: Desarrollo Web
+      </p>
+
+      <h4>Proyectos</h4>
+      <p>
+        Desarrollo del index principal del portafolio y apoyo en la implementación de módulos con PHP y MySQL.
+      </p>
+    `
+  }
+];
+
+
+    // Initialize with first developer selected
+    window.addEventListener('DOMContentLoaded', () => {
+      selectCharacter(0);
+    });
+  </script>
+ <!-- MODAL VER MÁS -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <span class="modal-close" onclick="closeModal()">✕</span>
+
+    <h2 id="modal-name"></h2>
+    <p class="modal-role" id="modal-role"></p>
+
+    <div class="modal-content" id="modal-content"></div>
+  </div>
+</div>
+
+<script>
+     let currentCharacter = 0;
+
+function selectCharacter(index){
+  currentCharacter = index;
+
+  const char = characters[index];
+
+  document.getElementById('character-description').textContent = char.description;
+  document.getElementById('character-image').src = char.image;
+  document.getElementById('character-display-name').textContent = char.displayName;
+  document.getElementById('detail-name').textContent = char.name;
+  document.getElementById('detail-role').textContent = char.role;
+  document.getElementById('ability-name').textContent = char.ability;
+  document.getElementById('ability-desc').textContent = char.abilityDesc;
+
+  const ratingDiv = document.getElementById('rating');
+  ratingDiv.innerHTML = '';
+  for(let i=0;i<5;i++){
+    const star = document.createElement('span');
+    star.className = i < char.rating ? 'star filled' : 'star';
+    star.textContent = '★';
+    ratingDiv.appendChild(star);
+  }
+}
+const modalOverlay = document.getElementById('modalOverlay');
+
+document.querySelector('.read-more').addEventListener('click', () => {
+  const char = characters[currentCharacter];
+
+  document.getElementById('modal-name').textContent = char.name;
+  document.getElementById('modal-role').textContent = char.role;
+  document.getElementById('modal-content').innerHTML = char.fullInfo;
+
+  modalOverlay.classList.add('active');
+});
+
+function closeModal(){
+  modalOverlay.classList.remove('active');
+}
+</script>
+
+</body>
+</html>

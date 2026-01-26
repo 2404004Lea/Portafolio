@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unidad 1 — Portafolio</title>
+
+  <!-- OJO: si tu styles.css define variables (var(--silver), etc.)
+       conviene cargar styles.css PRIMERO y luego unidades.css -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/unidades.css">
+</head>
+
+<body>
+  <!-- ✅ Burbujitas (igual que tu index) -->
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="bg-orb spin" style="width:10px;height:10px;left:10%;top:18%;--dx:40px;--dy:-60px;--dur:18s;--s:1.15;"></span>
+    <span class="bg-orb"      style="width:7px;height:7px;left:22%;top:72%;--dx:-30px;--dy:-70px;--dur:22s;--s:1.10;"></span>
+    <span class="bg-orb spin" style="width:12px;height:12px;left:46%;top:26%;--dx:55px;--dy:-40px;--dur:20s;--s:1.20;"></span>
+    <span class="bg-orb"      style="width:8px;height:8px;left:64%;top:62%;--dx:35px;--dy:-85px;--dur:24s;--s:1.12;"></span>
+    <span class="bg-orb spin" style="width:6px;height:6px;left:78%;top:20%;--dx:-45px;--dy:-55px;--dur:19s;--s:1.18;"></span>
+    <span class="bg-orb"      style="width:9px;height:9px;left:88%;top:78%;--dx:-35px;--dy:-65px;--dur:26s;--s:1.10;"></span>
+  </div>
+
+  <div class="container">
+    <!-- ✅ NAV (tu index) -->
+    <header class="nav reveal up">
+      <div class="nav-left logo" onclick="location.href='index.html#inicio'">
+        <span class="logo-icon"></span>
+        <span class="logo-text">PORTAFOLIO</span>
+      </div>
+
+      <nav class="nav-right" id="navMagic">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="introduccion.html" class="nav-link">Introducción</a>
+        <div class="nav-item" id="navMagic">
+            <a href="#unidades" class="nav-link">Unidades ▾</a>
+            <ul class="submenu">
+                <li><a href="unidad1.html">INTRODUCCIÓN AL DESARROLLO WEB ORIENTADO A SERVICIOS</a></li>
+                <li><a href="unidad2.html">IMPLEMENTACIÓN DE API</a></li>
+                <li><a href="unidad3.html">DESARROLLO API</a></li>
+                <li><a href="unidad4.html">IMPLEMENTACIÓN</a></li>
+                <span class="nav-underline" aria-hidden="true"></span>
+            </ul>
+        </div>
+            <span class="nav-underline" aria-hidden="true"></span>
+        <a href="perfil.html" class="nav-link">Perfil</a>
+        <span class="nav-underline" aria-hidden="true"></span>
+      </nav>
+    </header>
+
+    <hr class="reveal up d1">
+
+    <!-- ✅ INTRO (mantiene el estilo de tu compa, pero SIN imagen) -->
+    <div class="introduccion reveal up d2" id="introduccion">
+      <h2>UNIDAD 1. INTRODUCCIÓN AL DESARROLLO WEB ORIENTADO A SERVICIOS</h2>
+
+      <p>
+        El objetivo de la unidad es comprender el paradigma del desarrollo orientado a servicios.
+        Identificar los servicios que ofrece la nube. Reconocer la Arquitectura Orientada a Servicios (SOA)
+        y sus estándares.
+      </p>
+
+      <!-- ✅ ANIMACIÓN SOA -->
+      <div class="soa-hub" aria-hidden="true" title="Servicios comunicándose (SOA)">
+        <div class="hub-ring"></div>
+        <div class="hub-core">
+          <span class="hub-title">SOA</span>
+          <span class="hub-sub">Services</span>
+        </div>
+
+        <div class="hub-node n1"><span>REST</span></div>
+        <div class="hub-node n2"><span>SOAP</span></div>
+        <div class="hub-node n3"><span>WSDL</span></div>
+        <div class="hub-node n4"><span>UDDI</span></div>
+        <div class="hub-node n5"><span>XML</span></div>
+        <div class="hub-node n6"><span>CLOUD</span></div>
+
+        <span class="hub-beam b1"></span>
+        <span class="hub-beam b2"></span>
+        <span class="hub-beam b3"></span>
+      </div>
+    </div>
+
+    <!-- ✅ SABERES (ya no PDF: abre modal) -->
+    <div class="saber reveal up" id="saberes">
+      <h2>UNIDAD 1 — SABERES</h2>
+
+      <div class="saber-cards reveal up d1">
+        <h3>1. Paradigmas del desarrollo de aplicaciones orientadas a servicios.</h3>
+        <button class="open-modal" data-title="Saber 1" data-target="#u1-saber1">Ver</button>
+      </div>
+
+      <div class="saber-cards reveal up d2">
+        <h3>2. Arquitectura orientada a servicios (SOA).</h3>
+        <button class="open-modal" data-title="Saber 2" data-target="#u1-saber2">Ver</button>
+      </div>
+    </div>
+
+    <!-- ✅ SABER HACER -->
+    <div class="saber-hacer reveal up" id="saber-hacer">
+      <h2>UNIDAD 1 — SABER HACER</h2>
+
+      <div class="saber-hacer-cards reveal up d1">
+        <h3>1. Envío de correos</h3>
+        <p>
+          Utilizando PHP y la librería PHPMailer, se puede enviar correos electrónicos de manera sencilla y eficiente.
+        </p>
+        <button class="open-modal" data-title="Saber hacer 1" data-target="#u1-hacer1">Ver</button>
+      </div>
+
+      <div class="saber-hacer-cards reveal up d2">
+        <h3>2. Suscripción</h3>
+        <button class="open-modal" data-title="Saber hacer 2" data-target="#u1-hacer2">Ver</button>
+      </div>
+    </div>
+
+    <!-- ✅ FOOTER (tu index) -->
+    <footer class="footer reveal up">
+      <div class="footer-inner">
+        <div class="footer-col">
+          <h4>Portafolio</h4>
+          <p>
+            Portafolio de evidencias académicas de la materia
+            <strong>Desarrollo Web</strong>.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Datos académicos</h4>
+          <ul>
+            <li>Universidad Tecnológica</li>
+            <li>Carrera: Desarrollo de Software</li>
+            <li>Materia: Desarrollo Web</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Equipo</h4>
+          <p>
+            Aguilar López Naylea Hiromi<br>
+            Rodríguez Galindo Victoria Carolina
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-line"></div>
+
+      <div class="footer-bottom">
+        <span>© 2026 — Portafolio de evidencias</span>
+        <span>Desarrollado por Victoria Carolina y Naylea Aguilar</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ✅ MODAL -->
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Cerrar">✕</button>
+      <h3 class="modal-title" id="modalTitle">Título</h3>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- ✅ Contenido oculto (lo que va dentro del modal) -->
+  <template id="u1-saber1">
+    <h4>1. Paradigma del desarrollo de aplicaciones orientadas a servicios</h4>
+
+    <p>
+      El desarrollo de aplicaciones orientadas a servicios es un paradigma que se basa en la
+      creación de software mediante servicios independientes que se comunican entre sí a través
+      de una red. Cada servicio cumple una función específica y puede ser reutilizado por diferentes
+      aplicaciones, lo que facilita el mantenimiento, la escalabilidad y la integración de sistemas.
+    </p>
+
+    <h5>Servicios que se ofrecen en la nube</h5>
+    <p>
+      La computación en la nube proporciona distintos tipos de servicios que permiten a las
+      organizaciones y desarrolladores acceder a recursos tecnológicos sin necesidad de contar
+      con infraestructura física propia.
+    </p>
+
+    <ul>
+      <li><strong>IaaS (Infrastructure as a Service):</strong> Proporciona infraestructura como servidores,
+        almacenamiento y redes.</li>
+      <li><strong>PaaS (Platform as a Service):</strong> Ofrece plataformas para desarrollar, probar y
+        desplegar aplicaciones.</li>
+      <li><strong>SaaS (Software as a Service):</strong> Permite utilizar aplicaciones directamente desde
+        internet sin instalación local.</li>
+    </ul>
+
+    <h5>Características de las aplicaciones orientadas a servicios</h5>
+    <p>
+      Las aplicaciones orientadas a servicios presentan una serie de características que las
+      diferencian de los modelos tradicionales de desarrollo:
+    </p>
+
+    <ul>
+      <li><strong>Desacoplamiento:</strong> Los servicios funcionan de manera independiente.</li>
+      <li><strong>Reutilización:</strong> Un mismo servicio puede ser utilizado por múltiples aplicaciones.</li>
+      <li><strong>Interoperabilidad:</strong> Pueden comunicarse entre diferentes plataformas y lenguajes.</li>
+      <li><strong>Escalabilidad:</strong> Se adaptan fácilmente a un aumento de usuarios o demanda.</li>
+      <li><strong>Accesibilidad:</strong> Se accede a ellos a través de la red mediante protocolos estándar.</li>
+    </ul>
+
+    <h5>Aplicaciones web híbridas (Mashup)</h5>
+    <p>
+      Las aplicaciones web híbridas, también conocidas como <strong>Mashups</strong>, combinan
+      información y funcionalidades provenientes de múltiples servicios o APIs para ofrecer
+      una experiencia más completa al usuario.
+    </p>
+
+    <p>
+      Estas aplicaciones permiten integrar datos de diferentes fuentes, como mapas, redes
+      sociales, bases de datos y servicios externos, facilitando el desarrollo rápido de soluciones
+      innovadoras.
+    </p>
+
+    <ul>
+      <li>Integración de múltiples servicios.</li>
+      <li>Uso de APIs públicas.</li>
+      <li>Mejora de la experiencia del usuario.</li>
+      <li>Mayor flexibilidad y rapidez en el desarrollo.</li>
+    </ul>
+
+    <p>
+      En conclusión, el paradigma orientado a servicios es fundamental en el desarrollo moderno
+      de aplicaciones, ya que promueve la reutilización, la escalabilidad y la integración eficiente
+      de sistemas en entornos distribuidos.
+    </p>
+  </template>
+
+  <template id="u1-saber2">
+    <h4>Arquitectura SOA</h4>
+
+    <p>
+      La <strong>Arquitectura Orientada a Servicios (SOA)</strong> es un enfoque de diseño de software
+      que organiza las aplicaciones como un conjunto de <strong>servicios independientes</strong>,
+      los cuales se comunican entre sí a través de una red para cumplir procesos de negocio.
+    </p>
+
+    <p>
+      Cada servicio en SOA está diseñado para realizar una función específica y puede ser
+      utilizado por diferentes aplicaciones, lo que permite una mayor flexibilidad,
+      reutilización y escalabilidad de los sistemas.
+    </p>
+
+    <h5>¿Qué es SOA?</h5>
+    <p>
+      SOA es un modelo arquitectónico que permite que los servicios sean consumidos de manera
+      independiente, sin importar la tecnología o el lenguaje de programación con el que hayan
+      sido desarrollados.
+    </p>
+
+    <h5>Principios de diseño en SOA</h5>
+    <ul>
+      <li><strong>Desacoplamiento:</strong> Los servicios no dependen directamente unos de otros.</li>
+      <li><strong>Reutilización:</strong> Un mismo servicio puede ser usado por múltiples aplicaciones.</li>
+      <li><strong>Interoperabilidad:</strong> Los servicios pueden comunicarse entre diferentes plataformas.</li>
+      <li><strong>Autonomía:</strong> Cada servicio controla su propia lógica y datos.</li>
+      <li><strong>Descubrimiento:</strong> Los servicios pueden ser localizados y utilizados fácilmente.</li>
+    </ul>
+
+    <h5>Estándares relacionados con los servicios</h5>
+    <p>
+      Para que la arquitectura SOA funcione correctamente, se utilizan diversos estándares que
+      permiten la comunicación, descripción y localización de los servicios:
+    </p>
+
+    <ul>
+      <li><strong>XML (Extensible Markup Language):</strong> Lenguaje utilizado para estructurar y transportar datos.</li>
+      <li><strong>SOAP (Simple Object Access Protocol):</strong> Protocolo para el intercambio de información entre servicios.</li>
+      <li><strong>WSDL (Web Services Description Language):</strong> Describe cómo se debe acceder a un servicio web.</li>
+      <li><strong>UDDI (Universal Description, Discovery and Integration):</strong> Permite registrar y localizar servicios.</li>
+      <li><strong>REST (Representational State Transfer):</strong> Estilo arquitectónico ligero para servicios web modernos.</li>
+    </ul>
+
+    <p>
+      Gracias a estos estándares, SOA permite construir sistemas distribuidos robustos,
+      seguros y escalables, facilitando la integración entre aplicaciones y plataformas
+      heterogéneas.
+    </p>
+  </template>
+
+  <template id="u1-hacer1">
+    <h4>Envío de correos (PHPMailer)</h4>
+    <p>Aquí pegas tu evidencia completa (pasos, código, capturas, explicación, conclusiones, etc.).</p>
+  </template>
+
+  <template id="u1-hacer2">
+    <h4>Suscripción</h4>
+    <p>Aquí pegas tu evidencia completa (formulario, validaciones, BD si aplica, explicación y pruebas).</p>
+  </template>
+
+  <script>
+  /* ✅ underline + hover (deja activo “Unidades”) */
+  (() => {
+    const nav = document.getElementById("navMagic");
+    if (!nav) return;
+
+    const underline = nav.querySelector(".nav-underline");
+    const links = [...nav.querySelectorAll(".nav-link")];
+
+    function moveUnderlineTo(el){
+      const navRect = nav.getBoundingClientRect();
+      const r = el.getBoundingClientRect();
+      underline.style.width = r.width + "px";
+      underline.style.transform = `translateX(${r.left - navRect.left}px)`;
+      underline.style.opacity = "1";
+    }
+
+    if (links.length > 2) moveUnderlineTo(links[2]);
+
+    links.forEach(link => link.addEventListener("mouseenter", () => moveUnderlineTo(link)));
+    nav.addEventListener("mouseleave", () => { if (links.length > 2) moveUnderlineTo(links[2]); });
+
+    const isFinePointer = matchMedia("(pointer:fine)").matches;
+    if (isFinePointer){
+      links.forEach(link => {
+        link.addEventListener("mousemove", (e) => {
+          const rect = link.getBoundingClientRect();
+          const x = e.clientX - rect.left - rect.width / 2;
+          const y = e.clientY - rect.top - rect.height / 2;
+          link.style.transform = `translate(${x * 0.08}px, ${y * 0.18}px)`;
+        });
+        link.addEventListener("mouseleave", () => { link.style.transform = "translate(0,0)"; });
+      });
+    }
+  })();
+
+  /* ✅ Modal logic */
+  (() => {
+    const backdrop = document.getElementById("modalBackdrop");
+    const closeBtn = document.getElementById("modalClose");
+    const body = document.getElementById("modalBody");
+    const title = document.getElementById("modalTitle");
+
+    function openModal(t, tplSelector){
+      const tpl = document.querySelector(tplSelector);
+      if (!tpl) return;
+
+      title.textContent = t || "Detalle";
+      body.innerHTML = "";
+      body.appendChild(tpl.content.cloneNode(true));
+
+      backdrop.hidden = false;
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal(){
+      backdrop.hidden = true;
+      document.body.style.overflow = "";
+    }
+
+    document.addEventListener("click", (e) => {
+      const btn = e.target.closest(".open-modal");
+      if (btn){
+        openModal(btn.dataset.title, btn.dataset.target);
+      }
+      if (e.target === backdrop) closeModal();
+    });
+
+    closeBtn.addEventListener("click", closeModal);
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !backdrop.hidden) closeModal();
+    });
+  })();
+
+  /* ✅ Scroll Reveal (para que vaya apareciendo la info) */
+  (() => {
+    const els = document.querySelectorAll(".reveal");
+    if (!els.length) return;
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add("show");
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -10% 0px" });
+
+    els.forEach(el => io.observe(el));
+  })();
+  </script>
+</body>
+</html>

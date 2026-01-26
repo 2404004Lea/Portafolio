@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portafolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- NAV -->
+    <header class="nav">
+      <div class="nav-left logo">
+        <span class="logo-icon"></span>
+        <span class="logo-text">PORTAFOLIO</span>
+      </div>
+
+      <nav class="nav-right" id="navMagic">
+        <a href="#inicio" class="nav-link">Inicio</a>
+        <a href="introduccion.html" class="nav-link">Introducción</a>
+        <a href="#unidades" class="nav-link">Unidades</a>
+        <a href="perfil.html" class="nav-link"> Perfil</a>
+        <span class="nav-underline" aria-hidden="true"></span>
+      </nav>
+    </header>
+
+    <hr>
+
+    <main>
+
+      <!-- HERO -->
+      <section id="inicio" class="hero">
+        <div class="hero-left">
+          <h1>PORTAFOLIO</h1>
+          <p>
+            En este portafolio se presentan evidencias del aprendizaje adquirido en la
+            materia de Desarrollo Web, incluyendo actividades, prácticas y proyectos
+            realizados durante el curso.
+          </p>
+          <p>
+            Cada unidad contiene trabajos que reflejan el desarrollo de habilidades,
+            conocimientos y el progreso obtenido a lo largo de la materia.
+          </p>
+        </div>
+
+        <div class="hero-right">
+          <div class="folder-scene" title="Carpeta de evidencias">
+            <span class="orb o1"></span>
+            <span class="orb o2"></span>
+            <span class="orb o3"></span>
+            <span class="orb o4"></span>
+
+            <div class="paper p1"></div>
+            <div class="paper p2"></div>
+            <div class="paper p3"></div>
+
+            <div class="folder"></div>
+          </div>
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- OBJETIVOS -->
+      <section id="objetivos" class="section">
+        <h2>OBJETIVOS</h2>
+        <div class="card">
+          <ul>
+            <li>Documentar el progreso y aprendizaje en la materia de Desarrollo Web.</li>
+            <li>Presentar evidencias organizadas por unidades.</li>
+            <li>Aplicar buenas prácticas en la estructura de sitios web.</li>
+            <li>Demostrar el uso correcto de conceptos vistos durante el curso.</li>
+          </ul>
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- COMPETENCIAS -->
+      <section id="competencias" class="section">
+        <h2>COMPETENCIAS DESARROLLADAS</h2>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Competencias técnicas</h3>
+            <ul>
+              <li>Estructuración de páginas web con HTML.</li>
+              <li>Organización del contenido y navegación.</li>
+              <li>Comprensión básica de la lógica backend con PHP.</li>
+              <li>Aplicación de buenas prácticas de orden y claridad.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Competencias personales</h3>
+            <ul>
+              <li>Responsabilidad en la entrega de evidencias.</li>
+              <li>Autonomía en el desarrollo de actividades.</li>
+              <li>Capacidad de análisis y mejora continua.</li>
+              <li>Comunicación clara de ideas y resultados.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- UNIDADES -->
+      <section id="unidades" class="section">
+        <h2>UNIDADES DE LA MATERIA</h2>
+        <p>Selecciona una unidad para ver sus evidencias:</p>
+
+        <div class="unit-grid">
+          <form action="unidad1.html" method="get">
+            <button class="unit-btn" type="submit">Unidad 1</button>
+          </form>
+
+          <form action="unidad2.html" method="get">
+            <button class="unit-btn" type="submit">Unidad 2</button>
+          </form>
+
+          <form action="unidad3.html" method="get">
+            <button class="unit-btn" type="submit">Unidad 3</button>
+          </form>
+
+          <form action="unidad4.html" method="get">
+            <button class="unit-btn" type="submit">Unidad 4</button>
+          </form>
+        </div>
+      </section>
+
+      <hr>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+      <div class="footer-inner">
+
+        <div class="footer-col">
+          <h4>Portafolio</h4>
+          <p>
+            Portafolio de evidencias académicas de la materia
+            <strong>Desarrollo Web</strong>.
+          </p>
+        </div>
+
+       
+
+        <div class="footer-col">
+          <h4>Datos académicos</h4>
+          <ul>
+            <li>Universidad Tecnológica</li>
+            <li>Carrera: Desarrollo de Software</li>
+            <li>Materia: Desarrollo Web</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-line"></div>
+
+      <div class="footer-bottom">
+        <span>© 2026 — Portafolio de evidencias</span>
+        <span>Desarrollado por Victoria Carolina y Naylea Aguilar</span>
+      </div>
+
+    </footer>
+
+  </div>
+
+  <!-- SCRIPTS -->
+  <script>
+  /* NAV underline + magnetic hover */
+  (() => {
+    const nav = document.getElementById("navMagic");
+    if (!nav) return;
+
+    const underline = nav.querySelector(".nav-underline");
+    const links = [...nav.querySelectorAll(".nav-link")];
+
+    function moveUnderlineTo(el){
+      const navRect = nav.getBoundingClientRect();
+      const r = el.getBoundingClientRect();
+      underline.style.width = r.width + "px";
+      underline.style.transform = `translateX(${r.left - navRect.left}px)`;
+      underline.style.opacity = "1";
+    }
+
+    if (links.length) moveUnderlineTo(links[0]);
+
+    links.forEach(link => {
+      link.addEventListener("mouseenter", () => moveUnderlineTo(link));
+    });
+
+    nav.addEventListener("mouseleave", () => {
+      if (links.length) moveUnderlineTo(links[0]);
+    });
+
+    const isFinePointer = matchMedia("(pointer:fine)").matches;
+    if (isFinePointer){
+      links.forEach(link => {
+        link.addEventListener("mousemove", e => {
+          const r = link.getBoundingClientRect();
+          const x = e.clientX - r.left - r.width / 2;
+          const y = e.clientY - r.top - r.height / 2;
+          link.style.transform = `translate(${x * 0.08}px, ${y * 0.18}px)`;
+        });
+        link.addEventListener("mouseleave", () => {
+          link.style.transform = "translate(0,0)";
+        });
+      });
+    }
+  })();
+
+  /* Parallax fondo */
+  window.addEventListener("scroll", () => {
+    const y = window.scrollY || 0;
+    document.body.style.backgroundPosition = `0px ${y * 0.08}px`;
+  }, { passive:true });
+  </script>
+
+</body>
+<!-- Burbujitas sutiles de fondo -->
+<div class="bg-orbs" aria-hidden="true">
+  <span class="bg-orb spin" style="width:10px;height:10px;left:10%;top:18%;--dx:40px;--dy:-60px;--dur:18s;--s:1.15;"></span>
+  <span class="bg-orb"      style="width:7px;height:7px;left:22%;top:72%;--dx:-30px;--dy:-70px;--dur:22s;--s:1.10;"></span>
+  <span class="bg-orb spin" style="width:12px;height:12px;left:46%;top:26%;--dx:55px;--dy:-40px;--dur:20s;--s:1.20;"></span>
+  <span class="bg-orb"      style="width:8px;height:8px;left:64%;top:62%;--dx:35px;--dy:-85px;--dur:24s;--s:1.12;"></span>
+  <span class="bg-orb spin" style="width:6px;height:6px;left:78%;top:20%;--dx:-45px;--dy:-55px;--dur:19s;--s:1.18;"></span>
+  <span class="bg-orb"      style="width:9px;height:9px;left:88%;top:78%;--dx:-35px;--dy:-65px;--dur:26s;--s:1.10;"></span>
+</div>
+
+</html>

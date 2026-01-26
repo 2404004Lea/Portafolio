@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introducción</title>
+
+
+  <link rel="stylesheet" href="css/introduccion.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Scroll reveal -->
+  <style>
+    .reveal{
+      opacity:0;
+      transform: translateY(18px);
+      filter: blur(6px);
+      transition: opacity .7s ease, transform .7s ease, filter .7s ease;
+      will-change: opacity, transform, filter;
+    }
+    .reveal.show{
+      opacity:1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+    .reveal.up{ transform: translateY(22px); }
+    .reveal.left{ transform: translateX(-22px); }
+    .reveal.right{ transform: translateX(22px); }
+    .reveal.d1{ transition-delay:.06s; }
+    .reveal.d2{ transition-delay:.14s; }
+    .reveal.d3{ transition-delay:.22s; }
+    .reveal.d4{ transition-delay:.30s; }
+
+    @media (prefers-reduced-motion: reduce){
+      .reveal{ opacity:1; transform:none; filter:none; transition:none; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Burbujitas sutiles del fondo -->
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="bg-orb spin" style="width:10px;height:10px;left:15%;top:20%;--dx:40px;--dy:-60px;--dur:18s;--s:1.15;"></span>
+    <span class="bg-orb"      style="width:7px;height:7px;left:35%;top:70%;--dx:-30px;--dy:-80px;--dur:22s;--s:1.10;"></span>
+    <span class="bg-orb spin" style="width:12px;height:12px;left:55%;top:25%;--dx:50px;--dy:-40px;--dur:20s;--s:1.20;"></span>
+    <span class="bg-orb"      style="width:8px;height:8px;left:75%;top:65%;--dx:35px;--dy:-90px;--dur:24s;--s:1.12;"></span>
+  </div>
+
+  <div class="container">
+
+    <!-- NAVBAR -->
+    <header class="nav reveal up">
+      <div class="nav-left logo" onclick="location.href='index.html#inicio'">
+        <span class="logo-icon"></span>
+        <span class="logo-text">PORTAFOLIO</span>
+      </div>
+
+      <nav class="nav-right" id="navMagic">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="introduccion.html" class="nav-link">Introducción</a>
+        <div class="nav-item" id="navMagic">
+            <a href="#unidades" class="nav-link">Unidades ▾</a>
+            <ul class="submenu">
+                <li><a href="unidad1.html">INTRODUCCIÓN AL DESARROLLO WEB ORIENTADO A SERVICIOS</a></li>
+                <li><a href="unidad2.html">IMPLEMENTACIÓN DE API</a></li>
+                <li><a href="unidad3.html">DESARROLLO API</a></li>
+                <li><a href="unidad4.html">IMPLEMENTACIÓN</a></li>
+                <span class="nav-underline" aria-hidden="true"></span>
+            </ul>
+        </div>
+        <a href="perfil.html" class="nav-link"> Perfil</a>
+        <span class="nav-underline" aria-hidden="true"></span>
+      </nav>
+    </header>
+
+    <hr class="reveal up d1">
+
+    <!-- HERO -->
+    <section class="hero" id="introduccion">
+
+      <div class="hero-left reveal left">
+        <h1>INTRODUCCIÓN</h1>
+        <p>
+          Este portafolio de evidencias presenta los conocimientos, prácticas y
+          competencias adquiridas a lo largo del curso, reflejando el aprendizaje
+          y la aplicación de conceptos en proyectos reales.
+        </p>
+      </div>
+
+      <!--  Animación (tu "pf-carousel") -->
+      <div class="hero-right reveal right">
+        <div class="pf-carousel" aria-label="Animación Portafolio (3D)">
+          <div class="pf-stage">
+            <div class="pf-card3d c1">
+              <div class="pf-topline"></div>
+              <div class="pf-tag">PROYECTO</div>
+              <div class="pf-title">API / CRUD</div>
+              <div class="pf-lines">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+
+            <div class="pf-card3d c2">
+              <div class="pf-topline"></div>
+              <div class="pf-tag">EVIDENCIA</div>
+              <div class="pf-title">Documentación</div>
+              <div class="pf-lines">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+
+            <div class="pf-card3d c3">
+              <div class="pf-topline"></div>
+              <div class="pf-tag">EVIDENCIA</div>
+              <div class="pf-title">Capturas</div>
+              <div class="pf-lines">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+
+            <div class="pf-card3d c4">
+              <div class="pf-topline"></div>
+              <div class="pf-tag">PROYECTO</div>
+              <div class="pf-title">Frontend</div>
+              <div class="pf-lines">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+
+            <div class="pf-card3d c5">
+              <div class="pf-topline"></div>
+              <div class="pf-tag">ZIP</div>
+              <div class="pf-title">Entrega</div>
+              <div class="pf-lines">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+
+            <div class="pf-glow"></div>
+            <div class="pf-dots">
+              <span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <hr class="reveal up">
+
+    <!-- INTRODUCCIÓN AL DESARROLLO -->
+    <section class="portafolio-section reveal up">
+      <h2>INTRODUCCIÓN AL DESARROLLO</h2>
+
+      <div class="intro-cards">
+        <div class="card reveal up d1">
+          <h4>¿QUÉ ES EL DESARROLLO WEB ORIENTADO A SERVICIOS?</h4>
+          <p>
+            Es un enfoque donde las funcionalidades se organizan como servicios
+            independientes, reutilizables y accesibles a través de la red.
+          </p>
+        </div>
+
+        <div class="card reveal up d2">
+          <h4>IMPORTANCIA ACTUAL</h4>
+          <p>
+            Permite crear aplicaciones más flexibles, escalables y fáciles de
+            mantener en sistemas modernos.
+          </p>
+        </div>
+
+        <div class="card reveal up d3">
+          <h4>BENEFICIOS</h4>
+          <p>
+            Facilita la integración, el mantenimiento, la reutilización de
+            servicios y la escalabilidad.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- OBJETIVOS -->
+    <section class="objetivos-section reveal up" id="objetivos">
+      <h3>OBJETIVOS DEL PORTAFOLIO</h3>
+
+      <div class="obbjetivo cards">
+        <div class="objetivo-card reveal up d1">
+          <h4>OBJETIVO GENERAL</h4>
+          <p>
+            Documentar y demostrar las competencias adquiridas durante el curso
+            mediante evidencias académicas.
+          </p>
+        </div>
+
+        <div class="objetivo-card reveal up d2">
+          <h4>OBJETIVOS ESPECÍFICOS</h4>
+          <ul>
+            <li>Registrar proyectos realizados.</li>
+            <li>Mostrar la evolución del aprendizaje.</li>
+            <li>Destacar habilidades técnicas.</li>
+            <li>Facilitar la evaluación académica.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <hr class="reveal up">
+
+    <!-- FOOTER -->
+    <footer class="footer reveal up">
+      <div class="footer-inner">
+
+        <div class="footer-col">
+          <h4>Portafolio</h4>
+          <p>Portafolio de evidencias académicas — Desarrollo Web.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Equipo</h4>
+          <p>
+            Aguilar López Naylea Hiromi<br>
+            Rodríguez Galindo Victoria Carolina
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Materia</h4>
+          <p>Desarrollo Web</p>
+        </div>
+
+      </div>
+
+      <div class="footer-line"></div>
+
+      <div class="footer-bottom">
+        <span>© 2026 — Portafolio de evidencias</span>
+        <span>5DSMB</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- underline animado del navbar -->
+  <script>
+  (() => {
+    const nav = document.getElementById("navMagic");
+    if (!nav) return;
+
+    const underline = nav.querySelector(".nav-underline");
+    const links = [...nav.querySelectorAll(".nav-link")];
+
+    function move(el){
+      const navRect = nav.getBoundingClientRect();
+      const r = el.getBoundingClientRect();
+      underline.style.width = r.width + "px";
+      underline.style.transform = `translateX(${r.left - navRect.left}px)`;
+      underline.style.opacity = "1";
+    }
+
+    if (links.length > 1) move(links[1]); // deja activa Introducción
+
+    links.forEach(l => l.addEventListener("mouseenter", () => move(l)));
+    nav.addEventListener("mouseleave", () => { if (links.length > 1) move(links[1]); });
+  })();
+  </script>
+
+  <!-- Scroll reveal -->
+  <script>
+  (() => {
+    const els = document.querySelectorAll(".reveal");
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add("show");
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -10% 0px" });
+
+    els.forEach(el => io.observe(el));
+  })();
+  </script>
+
+</body>
+</html>

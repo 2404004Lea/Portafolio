@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unidad 2 — Portafolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/unidades.css">
+</head>
+<body>
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="bg-orb spin" style="width:10px;height:10px;left:10%;top:18%;--dx:40px;--dy:-60px;--dur:18s;--s:1.15;"></span>
+    <span class="bg-orb" style="width:7px;height:7px;left:22%;top:72%;--dx:-30px;--dy:-70px;--dur:22s;--s:1.10;"></span>
+    <span class="bg-orb spin" style="width:12px;height:12px;left:46%;top:26%;--dx:55px;--dy:-40px;--dur:20s;--s:1.20;"></span>
+    <span class="bg-orb" style="width:8px;height:8px;left:64%;top:62%;--dx:35px;--dy:-85px;--dur:24s;--s:1.12;"></span>
+  </div>
+
+  <div class="container">
+    <header class="nav">
+      <div class="nav-left logo" onclick="location.href='index.html#inicio'">
+        <span class="logo-icon"></span><span class="logo-text">PORTAFOLIO</span>
+      </div>
+      <nav class="nav-right" id="navMagic">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="introduccion.html" class="nav-link">Introducción</a>
+        <div class="nav-item" id="navMagic">
+            <a href="#unidades" class="nav-link">Unidades ▾</a>
+            <ul class="submenu">
+                <li><a href="unidad1.html">INTRODUCCIÓN AL DESARROLLO WEB ORIENTADO A SERVICIOS</a></li>
+                <li><a href="unidad2.html">IMPLEMENTACIÓN DE API</a></li>
+                <li><a href="unidad3.html">DESARROLLO API</a></li>
+                <li><a href="unidad4.html">IMPLEMENTACIÓN</a></li>
+                <span class="nav-underline" aria-hidden="true"></span>
+            </ul>
+        </div>
+            <span class="nav-underline" aria-hidden="true"></span>
+      </nav>
+    </header>
+
+    <hr>
+
+    <div class="introduccion" id="introduccion">
+      <h2>UNIDAD 2. IMPLEMENTACIÓN DE INTERFAZ DE PROGRAMACIÓN DE APLICACIONES (API)</h2>
+      <p>
+        El objetivo de la unidad es comprender el concepto de API y su importancia en el desarrollo de software.
+        Aprender a diseñar e implementar APIs RESTful utilizando buenas prácticas y estándares.
+        Familiarizarse con herramientas y tecnologías comunes para la creación y consumo de APIs.
+      </p>
+
+      <div class="doc-stack" aria-hidden="true" title="Evidencias del portafolio">
+        <div class="doc d1"></div><div class="doc d2"></div><div class="doc d3"></div><div class="clip"></div>
+      </div>
+    </div>
+
+    <div class="saber" id="saberes">
+      <h2>UNIDAD 2 — SABER</h2>
+  
+
+      <div class="saber-cards">
+        <h3>1. (Tema por definir)</h3>
+        <button class="open-modal" data-title="Unidad 2 — Saber 1" data-target="#u2-s1">Ver</button>
+      </div>
+
+      <div class="saber-cards">
+        <h3>2. (Tema por definir)</h3>
+        <button class="open-modal" data-title="Unidad 2 — Saber 2" data-target="#u2-s2">Ver</button>
+      </div>
+    </div>
+
+    <div class="saber-hacer" id="saber-hacer">
+      <h2>UNIDAD 2 — SABER HACER</h2>
+
+
+      <div class="saber-hacer-cards">
+        <h3>1. (Práctica por definir)</h3>
+        <p>Explicación:</p>
+        <button class="open-modal" data-title="Unidad 2 — Saber hacer 1" data-target="#u2-h1">Ver</button>
+      </div>
+
+      <div class="saber-hacer-cards">
+        <h3>2. (Práctica por definir)</h3>
+        <button class="open-modal" data-title="Unidad 2 — Saber hacer 2" data-target="#u2-h2">Ver</button>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-col">
+          <h4>Portafolio</h4>
+          <p>Portafolio de evidencias académicas de la materia <strong>Desarrollo Web</strong>.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Datos académicos</h4>
+          <ul>
+            <li>Universidad Tecnológica</li>
+            <li>Carrera: Desarrollo de Software</li>
+            <li>Materia: Desarrollo Web</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Equipo</h4>
+          <p>Aguilar López Naylea Hiromi<br>Rodríguez Galindo Victoria Carolina</p>
+        </div>
+      </div>
+      <div class="footer-line"></div>
+      <div class="footer-bottom">
+        <span>© 2026 — Portafolio de evidencias</span>
+        <span>Desarrollado por Victoria Carolina y Naylea Aguilar</span>
+      </div>
+    </footer>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Cerrar">✕</button>
+      <h3 class="modal-title" id="modalTitle">Título</h3>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <template id="u2-s1"><h4>Tema por definir</h4><p>Contenido aquí…</p></template>
+  <template id="u2-s2"><h4>Tema por definir</h4><p>Contenido aquí…</p></template>
+  <template id="u2-h1"><h4>Práctica por definir</h4><p>Contenido aquí…</p></template>
+  <template id="u2-h2"><h4>Práctica por definir</h4><p>Contenido aquí…</p></template>
+
+  <script>
+  (() => {
+    const nav = document.getElementById("navMagic");
+    if (!nav) return;
+    const underline = nav.querySelector(".nav-underline");
+    const links = [...nav.querySelectorAll(".nav-link")];
+
+    function moveUnderlineTo(el){
+      const navRect = nav.getBoundingClientRect();
+      const r = el.getBoundingClientRect();
+      underline.style.width = r.width + "px";
+      underline.style.transform = `translateX(${r.left - navRect.left}px)`;
+      underline.style.opacity = "1";
+    }
+    if (links.length > 2) moveUnderlineTo(links[2]);
+    links.forEach(link => link.addEventListener("mouseenter", () => moveUnderlineTo(link)));
+    nav.addEventListener("mouseleave", () => { if (links.length > 2) moveUnderlineTo(links[2]); });
+  })();
+
+  (() => {
+    const backdrop = document.getElementById("modalBackdrop");
+    const closeBtn = document.getElementById("modalClose");
+    const body = document.getElementById("modalBody");
+    const title = document.getElementById("modalTitle");
+
+    function openModal(t, tplSelector){
+      const tpl = document.querySelector(tplSelector);
+      if (!tpl) return;
+      title.textContent = t || "Detalle";
+      body.innerHTML = "";
+      body.appendChild(tpl.content.cloneNode(true));
+      backdrop.hidden = false;
+      document.body.style.overflow = "hidden";
+    }
+    function closeModal(){
+      backdrop.hidden = true;
+      document.body.style.overflow = "";
+    }
+    document.addEventListener("click", (e) => {
+      const btn = e.target.closest(".open-modal");
+      if (btn) openModal(btn.dataset.title, btn.dataset.target);
+      if (e.target === backdrop) closeModal();
+    });
+    closeBtn.addEventListener("click", closeModal);
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !backdrop.hidden) closeModal(); });
+  })();
+  </script>
+</body>
+</html>
